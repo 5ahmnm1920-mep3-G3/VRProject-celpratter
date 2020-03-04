@@ -1,7 +1,7 @@
 # VRProject-celpratter
 
 ### Project description: 
-
+In this VR mini game, the player has to cook by following a recipe. Only the right ingredients lead to the perfect soup - so the player has to avoid the false ones.
  
 ### Development platform: 
 - OS: MacOS 10.14.3
@@ -17,10 +17,11 @@
 
 
 ### Third party material: 
-
+Kitchen Creation Kit by Studio Krokidana (Unity Assets Store)
+Adorable 3D Food Set by Layer Lab (Unity Assets Store)
 
 ### Project state: 
-0 %
+8 %
 
 ### Limitations: 
 
