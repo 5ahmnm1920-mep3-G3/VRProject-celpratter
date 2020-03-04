@@ -19,9 +19,10 @@ In this VR mini game, the player has to cook by following a recipe. Only the rig
 ### Third party material: 
 - Kitchen Creation Kit by Studio Krokidana (Unity Assets Store)
 - Adorable 3D Food Set by Layer Lab (Unity Assets Store)
+- Steam VR Plugin by Valve Corporation (Unity Assets Store)
 
 ### Project state: 
-8 %
+10%
 
 ### Limitations: 
 
