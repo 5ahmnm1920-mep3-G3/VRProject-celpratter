@@ -15,6 +15,7 @@ public class ColliderPot : MonoBehaviour
             Destroy(theCollision.gameObject);
             var TopfRenderer = Topf.GetComponent<Renderer>();
             TopfRenderer.material.SetColor("_Color", Color.green);
+            StartCoroutine(ResetColor());
         }
         else
         {
@@ -22,11 +23,18 @@ public class ColliderPot : MonoBehaviour
             Destroy(theCollision.gameObject);
             var TopfRenderer = Topf.GetComponent<Renderer>();
             TopfRenderer.material.SetColor("_Color", Color.red);
+            StartCoroutine(ResetColor());
         }
+    }
+
+     public IEnumerator ResetColor() {
+        yield return new WaitForSeconds(0.5f);
+        var TopfRenderer = Topf.GetComponent<Renderer>();
+        TopfRenderer.material.SetColor("_Color", Color.white);
     }
 
     void Update()
     {
-
+    
     }
 }
