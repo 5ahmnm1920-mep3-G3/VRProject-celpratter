@@ -23,13 +23,14 @@ In this VR mini game, the player has to cook by following a recipe. Only the rig
 - Food and Kitchen Props Pack by REACH THE END (Unity Assets Store)
 
 ### Project state: 
-55%
+60%
 
 ### Limitations: 
 
 
 ### Lessons Learned: 
-changing colors of objects
+- changing colors of objects
+- IEnumerator Coroutines, WaitForSeconds()
 
 
 Copyright by celpratter
