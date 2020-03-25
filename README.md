@@ -21,9 +21,10 @@ In this VR mini game, the player has to cook by following a recipe. Only the rig
 - Adorable 3D Food Set by Layer Lab (Unity Assets Store)
 - Steam VR Plugin by Valve Corporation (Unity Assets Store)
 - Food and Kitchen Props Pack by REACH THE END (Unity Assets Store)
+- Clipboard by cookiepopworks.com (Unity Assets Store)
 
 ### Project state: 
-60%
+65%
 
 ### Limitations: 
 
