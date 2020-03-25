@@ -8,6 +8,7 @@ TagManager:
   - Unhealthy
   - Healthy
   - Topf
+  - Clipboard
   layers:
   - Default
   - TransparentFX
