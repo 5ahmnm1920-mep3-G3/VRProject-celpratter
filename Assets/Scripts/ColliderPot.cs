@@ -6,18 +6,55 @@ public class ColliderPot : MonoBehaviour
 {
     [SerializeField]
     GameObject Topf;
+
+    [SerializeField]
+    GameObject Soup;
+
     public Transform clipboard;
     public Transform clipPos;
 
 
     void OnTriggerEnter(Collider theCollision)
     {
-        if (theCollision.gameObject.tag == "Healthy")
+        if (theCollision.gameObject.tag == "Mushroom")
         {
-            Debug.Log("healthy");
+            Destroy(theCollision.gameObject);
             var TopfRenderer = Topf.GetComponent<Renderer>();
             TopfRenderer.material.SetColor("_Color", Color.green);
-            StartCoroutine(ResetColor());
+            StartCoroutine(ResetColorTopf());
+            Soup.GetComponent<Renderer>().material.color = new Color(0.858f, 0.7248f, 0.3847f);
+        }
+        else if (theCollision.gameObject.tag == "Carrot")
+        {
+            Destroy(theCollision.gameObject);
+            var TopfRenderer = Topf.GetComponent<Renderer>();
+            TopfRenderer.material.SetColor("_Color", Color.green);
+            StartCoroutine(ResetColorTopf());
+            Soup.GetComponent<Renderer>().material.color = new Color(1f, 0.639f, 0.1462f);
+        }
+        else if (theCollision.gameObject.tag == "Tomato")
+        {
+            Destroy(theCollision.gameObject);
+            var TopfRenderer = Topf.GetComponent<Renderer>();
+            TopfRenderer.material.SetColor("_Color", Color.green);
+            StartCoroutine(ResetColorTopf());
+            Soup.GetComponent<Renderer>().material.color = new Color(0.7547f, 0.1614f, 0.0818f);
+        }
+        else if (theCollision.gameObject.tag == "Onion")
+        {
+            Destroy(theCollision.gameObject);
+            var TopfRenderer = Topf.GetComponent<Renderer>();
+            TopfRenderer.material.SetColor("_Color", Color.green);
+            StartCoroutine(ResetColorTopf());
+            Soup.GetComponent<Renderer>().material.color = new Color(0.9f, 0.7f, 0.6f);
+        }
+        else if (theCollision.gameObject.tag == "Garlic")
+        {
+            Destroy(theCollision.gameObject);
+            var TopfRenderer = Topf.GetComponent<Renderer>();
+            TopfRenderer.material.SetColor("_Color", Color.green);
+            StartCoroutine(ResetColorTopf());
+            Soup.GetComponent<Renderer>().material.color = new Color(0.9f, 0.8f, 0.43f);
         }
         else if (theCollision.gameObject.tag == "Clipboard")
         {
@@ -26,15 +63,15 @@ public class ColliderPot : MonoBehaviour
         }
         else
         {
-            Debug.Log("unhealthy");
             Destroy(theCollision.gameObject);
             var TopfRenderer = Topf.GetComponent<Renderer>();
             TopfRenderer.material.SetColor("_Color", Color.red);
-            StartCoroutine(ResetColor());
+            StartCoroutine(ResetColorTopf());
+            Soup.GetComponent<Renderer>().material.color = new Color(0.2f, 0.3f, 0.2f);
         }
     }
 
-    public IEnumerator ResetColor()
+    public IEnumerator ResetColorTopf()
     {
         yield return new WaitForSeconds(0.5f);
         var TopfRenderer = Topf.GetComponent<Renderer>();

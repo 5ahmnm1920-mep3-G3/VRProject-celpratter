@@ -22,9 +22,10 @@ In this VR mini game, the player has to cook by following a recipe. Only the rig
 - Steam VR Plugin by Valve Corporation (Unity Assets Store)
 - Food and Kitchen Props Pack by REACH THE END (Unity Assets Store)
 - Clipboard by cookiepopworks.com (Unity Assets Store)
+- Texture Maps Water_002 (3dtextures.me)
 
 ### Project state: 
-65%
+70%
 
 ### Limitations: 
 

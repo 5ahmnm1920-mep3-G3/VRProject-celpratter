@@ -9,6 +9,11 @@ TagManager:
   - Healthy
   - Topf
   - Clipboard
+  - Carrot
+  - Garlic
+  - Mushroom
+  - Onion
+  - Tomato
   layers:
   - Default
   - TransparentFX
