@@ -10,6 +10,7 @@ public class ColliderPot : MonoBehaviour
     [SerializeField]
     GameObject Soup;
 
+
     public Transform clipboard;
     public Transform clipPos;
     public float score = 0;
@@ -19,6 +20,12 @@ public class ColliderPot : MonoBehaviour
     public Light light2;
     public Light light3;
     public Light light4;
+
+    public Renderer Page;
+    public Material Start_mat;
+    public Material Finished_mat;
+
+    private string state = "Soup";
 
     void OnTriggerEnter(Collider theCollision)
     {
@@ -94,8 +101,31 @@ public class ColliderPot : MonoBehaviour
             light3.intensity = 0.5f;
             light4.color = new Color(0.0f, 0.8f, 0.0f);
             light4.intensity = 1.5f;
+            Page.material = Finished_mat;
+            state = "SoupFinished";
+        }
+        if (state == "SoupFinished")
+        {
+            if (theCollision.gameObject.tag == "Spoon")
+            {
+                light1.intensity = 1f;
+                light2.intensity = 1.9f;
+                light3.intensity = 1.8f;
+                light4.color = Color.white;
+                light4.intensity = 1f;
+                state = "Finished";
+            }
+        }
+        if (state == "Finished")
+        {
+            Time.timeScale = 0;
+            light1.intensity = 0f;
+            light2.intensity = 0f;
+            light3.intensity = 0f;
+            light4.intensity = 0f;
         }
     }
+
 
     public IEnumerator ResetColorTopf()
     {

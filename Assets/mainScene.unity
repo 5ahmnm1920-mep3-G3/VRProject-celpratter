@@ -6846,6 +6846,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spoon
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35bc0df9503f62644ac3107c73e4f0b4, type: 3}
+      propertyPath: m_TagString
+      value: Spoon
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 35bc0df9503f62644ac3107c73e4f0b4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.756
@@ -8363,6 +8367,9 @@ MonoBehaviour:
   light2: {fileID: 1317409804}
   light3: {fileID: 1535812584}
   light4: {fileID: 2081530527}
+  Page: {fileID: 1097845389}
+  Start_mat: {fileID: 2100000, guid: d2b1a0950d8d7cc469059a51cc5fe134, type: 2}
+  Finished_mat: {fileID: 2100000, guid: 6e92566c452894c26bddef86c576ad3d, type: 2}
 --- !u!1 &1939542571
 GameObject:
   m_ObjectHideFlags: 0
