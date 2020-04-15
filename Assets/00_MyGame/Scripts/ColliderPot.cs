@@ -106,7 +106,7 @@ public class ColliderPot : MonoBehaviour
             Soup.GetComponent<Renderer>().material.color = new Color(0.2f, 0.3f, 0.2f);
         }
 
-        if (score == 1f)
+        if (score == 5f)
         {
             Debug.Log("finished");
             light1.intensity = 0.5f;
