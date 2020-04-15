@@ -13,6 +13,8 @@ public class ColliderPot : MonoBehaviour
 
     public Transform clipboard;
     public Transform clipPos;
+    public Transform spoon;
+    public Transform spoonPos;
     public float score = 0;
 
 
@@ -27,6 +29,12 @@ public class ColliderPot : MonoBehaviour
 
     private string state = "Soup";
 
+    public GameObject canvas;
+
+    void Start()
+    {
+        canvas.SetActive(false);
+    }
     void OnTriggerEnter(Collider theCollision)
     {
         if (theCollision.gameObject.tag == "Mushroom")
@@ -84,6 +92,11 @@ public class ColliderPot : MonoBehaviour
             Debug.Log("clipboard");
             clipboard.position = clipPos.position;
         }
+        else if (theCollision.gameObject.tag == "Spoon")
+        {
+            Debug.Log("spoon");
+            spoon.position = spoonPos.position;
+        }
         else
         {
             Destroy(theCollision.gameObject);
@@ -123,6 +136,7 @@ public class ColliderPot : MonoBehaviour
             light2.intensity = 0f;
             light3.intensity = 0f;
             light4.intensity = 0f;
+            canvas.SetActive(true);
         }
     }
 
