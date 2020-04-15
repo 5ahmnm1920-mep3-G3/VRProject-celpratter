@@ -106,7 +106,7 @@ public class ColliderPot : MonoBehaviour
             Soup.GetComponent<Renderer>().material.color = new Color(0.2f, 0.3f, 0.2f);
         }
 
-        if (score == 5f)
+        if (score == 1f)
         {
             Debug.Log("finished");
             light1.intensity = 0.5f;
@@ -121,21 +121,12 @@ public class ColliderPot : MonoBehaviour
         {
             if (theCollision.gameObject.tag == "Spoon")
             {
-                light1.intensity = 1f;
-                light2.intensity = 1.9f;
-                light3.intensity = 1.8f;
-                light4.color = Color.white;
-                light4.intensity = 1f;
                 state = "Finished";
             }
         }
         if (state == "Finished")
         {
             Time.timeScale = 0;
-            light1.intensity = 0f;
-            light2.intensity = 0f;
-            light3.intensity = 0f;
-            light4.intensity = 0f;
             canvas.SetActive(true);
         }
     }
