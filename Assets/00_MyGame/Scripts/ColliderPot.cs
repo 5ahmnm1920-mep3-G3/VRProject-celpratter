@@ -30,6 +30,8 @@ public class ColliderPot : MonoBehaviour
     private string state = "Soup";
 
     public GameObject canvas;
+    public AudioSource drop;
+    public AudioSource win;
 
     void Start()
     {
@@ -44,6 +46,7 @@ public class ColliderPot : MonoBehaviour
             TopfRenderer.material.SetColor("_Color", Color.green);
             StartCoroutine(ResetColorTopf());
             Soup.GetComponent<Renderer>().material.color = new Color(0.858f, 0.7248f, 0.3847f);
+            drop.Play();
             score++;
             Debug.Log("score= " + score);
         }
@@ -54,6 +57,7 @@ public class ColliderPot : MonoBehaviour
             TopfRenderer.material.SetColor("_Color", Color.green);
             StartCoroutine(ResetColorTopf());
             Soup.GetComponent<Renderer>().material.color = new Color(1f, 0.639f, 0.1462f);
+            drop.Play();
             score++;
             Debug.Log("score= " + score);
         }
@@ -64,6 +68,7 @@ public class ColliderPot : MonoBehaviour
             TopfRenderer.material.SetColor("_Color", Color.green);
             StartCoroutine(ResetColorTopf());
             Soup.GetComponent<Renderer>().material.color = new Color(0.7547f, 0.1614f, 0.0818f);
+            drop.Play();
             score++;
             Debug.Log("score= " + score);
         }
@@ -74,6 +79,7 @@ public class ColliderPot : MonoBehaviour
             TopfRenderer.material.SetColor("_Color", Color.green);
             StartCoroutine(ResetColorTopf());
             Soup.GetComponent<Renderer>().material.color = new Color(0.9f, 0.7f, 0.6f);
+            drop.Play();
             score++;
             Debug.Log("score= " + score);
         }
@@ -84,6 +90,7 @@ public class ColliderPot : MonoBehaviour
             TopfRenderer.material.SetColor("_Color", Color.green);
             StartCoroutine(ResetColorTopf());
             Soup.GetComponent<Renderer>().material.color = new Color(0.9f, 0.8f, 0.43f);
+            drop.Play();
             score++;
             Debug.Log("score= " + score);
         }
@@ -91,11 +98,13 @@ public class ColliderPot : MonoBehaviour
         {
             Debug.Log("clipboard");
             clipboard.position = clipPos.position;
+            drop.Play();
         }
         else if (theCollision.gameObject.tag == "Spoon")
         {
             Debug.Log("spoon");
             spoon.position = spoonPos.position;
+            drop.Play();
         }
         else
         {
@@ -104,6 +113,7 @@ public class ColliderPot : MonoBehaviour
             TopfRenderer.material.SetColor("_Color", Color.red);
             StartCoroutine(ResetColorTopf());
             Soup.GetComponent<Renderer>().material.color = new Color(0.2f, 0.3f, 0.2f);
+            drop.Play();
         }
 
         if (score == 5)
@@ -121,11 +131,13 @@ public class ColliderPot : MonoBehaviour
         {
             if (theCollision.gameObject.tag == "Spoon")
             {
+                drop.Play();
                 state = "Finished";
             }
         }
         if (state == "Finished")
         {
+            win.Play();
             Time.timeScale = 0;
             canvas.SetActive(true);
         }
